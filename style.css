@@ -1,0 +1,85 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  overflow: hidden;
+}
+
+h1, h4 {
+  font-weight: bold;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#wheel {
+  border: 2px solid #222;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#wheel-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+
+#pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 60px;
+  background-color: #ff3b3b;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  z-index: 10;
+}
+
+.wheel-container {
+  background-color: transparent;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#name-list {
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+}
+
+#selected-name {
+  color: #007bff;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+
+  .wheel-container, .details-container {
+    flex-grow: 1;
+  }
+
+  #wheel {
+    width: 100%;
+    height: auto;
+  }
+
+  #pointer {
+    width: 30px;
+    height: 45px;
+  }
+}
+
